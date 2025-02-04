@@ -34,7 +34,7 @@
   --white_20: hsl(0, 0%, 100%, 0.2);
   --white_10: hsl(0, 0%, 100%, 0.1);
   --black_10: hsl(0, 0%, 0%, 0.1);
-  --white: hsl(0, 0%, 73%);
+  --white: hsl(0, 0%, 100%);
 
   /**
    * typography
