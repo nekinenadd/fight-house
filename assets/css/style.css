@@ -127,6 +127,10 @@ button,
 strong,
 ion-icon { display: block; }
 
+strong{
+  color: var(--rich-black-fogra-29-1);
+}
+
 img { height: auto; }
 
 input,
@@ -281,6 +285,10 @@ body {
   font-weight: var(--fw-700);
   text-transform: uppercase;
   max-width: max-content;
+}
+
+.hero-fight{
+  color: var(--rich-black-fogra-29-1);
 }
 
 .section-subtitle {
@@ -502,7 +510,10 @@ body {
 
 .hero .section-text { margin-block-end: 40px; }
 
-.hero .btn { margin-inline: auto; }
+.hero .btn { margin-inline: auto;background-color: var(--coquelicot);color: var(--rich-black-fogra-29-1);
+}
+
+.hero .btn:is(:hover, :focus){ background-color: var(--rich-black-fogra-29-1);color: var(--coquelicot);}
 
 .hero-banner { position: relative; }
 
