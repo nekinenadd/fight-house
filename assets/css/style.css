@@ -3,7 +3,6 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
  */
 
 
@@ -35,6 +34,8 @@
   --white_10: hsl(0, 0%, 100%, 0.1);
   --black_10: hsl(0, 0%, 0%, 0.1);
   --white: hsl(0, 0%, 100%);
+  --hover-for-yellow-buttons:hsl(0, 0%, 100%);
+  
 
   /**
    * typography
@@ -108,6 +109,14 @@ li { list-style: none; }
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.img {
+  display: inline-flex;
+}
+
+
+.img-logo { 
 }
 
 a,
@@ -228,18 +237,18 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--coquelicot);
-  color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
+  color: var(--coquelicot);
 }
 
 .btn-primary:is(:hover, :focus) {
-  background-color: var(--white);
-  color: var(--coquelicot);
+  background-color: var(--coquelicot);
+  color: var(--rich-black-fogra-29-1);
   box-shadow: var(--shadow-2);
 }
 
 .btn-secondary {
-  background-color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
   color: var(--coquelicot);
 }
 
@@ -385,7 +394,7 @@ body {
 }
 
 .nav-open-btn {
-  background-color: var(--coquelicot);
+  background-color: var(--rich-black-fogra-29-1);
   padding: 20px 15px;
   border-radius: var(--radius-8);
 }
@@ -583,8 +592,8 @@ body {
 .about .coach-title { font-size: var(--fs-6); }
 
 .about .btn-primary:is(:hover, :focus) {
-  background-color: var(--rich-black-fogra-29-1);
-  color: var(--white);
+  background-color: var(--coquelicot);
+  color: var(--rich-black-fogra-29-1);
   box-shadow: none;
 }
 
@@ -1131,7 +1140,11 @@ body {
 
 
 
-
+.img-logo { 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 /**
  * responsive for larger than 992px screen
@@ -1206,11 +1219,13 @@ body {
   .header .navbar-link:is(:hover, :focus, .active) { color: var(--coquelicot); }
 
   .header.active .btn {
-    background-color: var(--coquelicot);
-    color: var(--white);
+    background-color: var(--rich-black-fogra-29-1);
+    color: var(--coquelicot);
   }
 
-  .header.active .btn:is(:hover, :focus) { background-color: var(--rich-black-fogra-29-1); }
+  .header.active .btn:is(:hover, :focus) { background-color: var(--coquelicot);
+                                           color: var(--rich-black-fogra-29-1);
+  }
 
 
 
