@@ -25,7 +25,7 @@ function preloadImages(imageUrls) {
   });
 }
 
-preloadImages{[
+preloadImages([
   './assets/galerija/galerija1.webp',
   './assets/galerija/galerija2.webp',
   './assets/galerija/galerija3.webp',
@@ -35,7 +35,7 @@ preloadImages{[
   './assets/galerija/galerija7.webp',
   './assets/galerija/galerija8.webp',
   './assets/galerija/galerija9.webp'
-]};
+]);
 
 
 
