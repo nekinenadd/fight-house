@@ -18,6 +18,27 @@ const addEventOnElem = function (elem, type, callback) {
 
 
 
+function preloadImages(imageUrls) {
+  imageUrls.forEach(url => {
+    const img = new Image();
+    img.src = url;
+  });
+}
+
+preloadImages{[
+  './assets/galerija/galerija1.webp',
+  './assets/galerija/galerija2.webp',
+  './assets/galerija/galerija3.webp',
+  './assets/galerija/galerija4.webp',
+  './assets/galerija/galerija5.webp',
+  './assets/galerija/galerija6.webp',
+  './assets/galerija/galerija7.webp',
+  './assets/galerija/galerija8.webp',
+  './assets/galerija/galerija9.webp'
+]};
+
+
+
 /**
  * navbar toggle
  */
