@@ -36,6 +36,7 @@
   <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
   <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
   <link rel="preload" as="image" href="./assets/images/calories.svg">
+  <!--
   <link rel="preload" as="image" href="./assets/images/proba1.png">
   <link rel="preload" as="image" href="./assets/images/rekreativni-box.png.webp">
   <link rel="preload" as="image" href="./assets/images/class-icon-1.png">
@@ -52,7 +53,7 @@
   <link rel="preload" as="webp" href="./assets/galerija/galerija8.webp">
   <link rel="preload" as="webp" href="./assets/galerija/galerija9.webp">
   <link rel="preload" as="webp" href="./assets/galerija/galerija10.webp">
-
+-->
 
 
 </head>
@@ -147,7 +148,7 @@
 
             <picture>
 
-            <img src="./assets/images/proba1.png" width="660" height="753" alt="hero banner" class="w-100">
+            <img src="./assets/images/proba1.png" class="lazyload" width="660" height="753" alt="hero banner" class="w-100">
           </picture>
             <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
               class="circle circle-1">
@@ -175,9 +176,10 @@
         <div class="container">
 
           <div class="about-banner has-after">
+            <picture>
             <img src="./assets/images/sonslaija2.JPG" width="660" height="648"  loading="lazy" alt="about banner"
               class="w-100">
-
+            </picture>
            
             <img src="./assets/images/fitness.png" width="650" height="154" loading="lazy" alt="fitness"
               class="abs-img w-100">
@@ -577,7 +579,7 @@
 
                 <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
                   <img src="./assets/galerija/galerija4.webp" width="416" height="240" loading="lazy" alt="Weight Lifting"
-                    class="img-cover">
+                    class="img-cover" class="lazyload">
                 </figure>
               </div>
             </li>
