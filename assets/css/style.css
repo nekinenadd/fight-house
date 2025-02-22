@@ -436,6 +436,7 @@ body {
 }
 
 .navbar.active {
+  background-color: var(--rich-black-fogra-29-1);
   visibility: visible;
   transform: translateY(-100%);
   transition: 0.5s var(--cubic-out);
