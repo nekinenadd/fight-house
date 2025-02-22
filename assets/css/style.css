@@ -146,7 +146,7 @@ button { cursor: pointer; }
 
 ion-icon { pointer-events: none; }
 
-address { font-style: normal; }
+address { font-style: normal; color: white; }
 
 html {
   font-family: var(--ff-rubik);
@@ -464,6 +464,10 @@ body {
 }
 
 .navbar-link:is(:hover, :focus, .active) { color: var(--rich-black-fogra-29-1); }
+
+.navbar-link:is(.active) { color: var(--coquelicot);}
+
+.navbar-link{color: white;}
 
 
 
@@ -843,6 +847,8 @@ body {
 .footer-list > li:not(:first-child) { margin-block-start: 12px; }
 
 .footer-link { transition: var(--transition-1); }
+
+.footer-link { color: white;}
 
 .footer-link:not(.address):is(:hover, :focus) { color: var(--coquelicot); }
 
