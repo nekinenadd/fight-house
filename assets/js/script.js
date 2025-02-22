@@ -61,6 +61,8 @@ addEventOnElem(navLinks, "click", closeNavbar);
  * header & back top btn active
  */
 
+
+
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
