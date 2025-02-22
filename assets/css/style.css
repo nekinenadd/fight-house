@@ -125,7 +125,7 @@ span,
 input,
 button,
 strong,
-ion-icon { display: block; }
+ion-icon { display: block; color: black;}
 
 strong{
   color: var(--rich-black-fogra-29-1);
