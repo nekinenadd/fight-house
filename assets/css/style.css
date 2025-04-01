@@ -13,6 +13,41 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+#home {
+  background-color: rgba(0, 0, 0, 0.822);
+  position: relative;
+  height: 100vh;  /* Full viewport height */
+  overflow: hidden; /* Prevent any content from overflowing */
+}
+
+/* Position and size the video background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Make sure the video stays behind the content */
+}
+
+/* Ensure the video covers the entire section */
+.video-bg {
+  object-fit: cover; /* Makes sure the video fills the section without distortion */
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the content above the video */
+.hero-content {
+  position: relative;
+  z-index: 1;  /* Ensures the content is above the video */
+  text-align: center; /* Centers the content */
+  color: white; /* Text color */
+  padding: 60px 20px; /* Adds padding around the content */
+}
+
+/* Optional: Add a slight overlay to darken the video */
+
 :root {
 
   /**
@@ -167,15 +202,9 @@ body {
 
 ::-webkit-scrollbar-track { background-color: var(--light-gray); }
 
-::-webkit-scrollbar-thumb { background-color: var(--coquelicot); }
+::-webkit-scrollbar-thumb { background-color: var(--coquelicot); border-radius: 5px;}
 
 ::-webkit-scrollbar-thumb:hover { background-color: var(--rich-black-fogra-29-1); }
-
-
-::-webkit-scrollbar-track {
-  background-color: #d7f81d;
-}
-
 
 
 
@@ -377,7 +406,7 @@ body {
 
 .header {
   background-color: var(--white);
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -427,9 +456,12 @@ body {
   margin-inline-start: auto;
 }
 
+
+
+
 .navbar {
   background-color: var(--coquelicot);
-  color: var(--white);
+  color: none;
   position: fixed;
   top: 100%;
   left: 0;
@@ -439,6 +471,7 @@ body {
   place-content: center;
   visibility: hidden;
   transition: 0.25s var(--cubic-in);
+  z-index: -2;
 }
 
 .navbar.active {
@@ -474,7 +507,6 @@ body {
 .navbar-link:is(.active) { color: var(--coquelicot);}
 
 .navbar-link{color: white;}
-
 
 
 
@@ -629,10 +661,33 @@ body {
   #VIDEO
 \*-----------------------------------*/
 
-.video {
-  padding-block: 0;
-  margin-block-end: -250px;
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (opacity) for dimming */
+  z-index: 2; /* Ensure the overlay is above the video */
 }
+
+.video-container {
+  height: 100%;
+  width: 100%;
+  position: contain;
+}
+
+.video-container video {
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+position: absolute;
+object-fit: cover;
+z-index: 0;
+}
+
 
 .video-card {
   background-color: var(--light-gray);
@@ -1025,7 +1080,7 @@ body {
   }
 
   .hero-subtitle,
-  .section-subtitle { font-size: var(--fs-5); }
+  .subtitle { font-size: var(--fs-5); }
 
 
 
@@ -1035,7 +1090,7 @@ body {
 
   .header .container {
     max-width: unset;
-    padding-inline: 30px;
+    padding-inline: 5px;
   }
 
 
@@ -1226,10 +1281,12 @@ body {
 
   .header.active .logo { color: var(--rich-black-fogra-29-1); }
 
+
   .navbar,
   .navbar.active {
     all: unset;
     margin-inline-start: auto;
+    background-color: transparent;
   }
 
   .navbar-list {
@@ -1262,8 +1319,56 @@ body {
   /**
    * HERO
    */
+/* Make sure the hero section content is aligned with the video */
+.hero {
+  position: relative; /* To allow absolute positioning of the video */
+  color: var(--cadet-gray);
+  text-align: center;
+  padding-block-start: calc(var(--section-padding) + 80px);
+  padding-block-end: 0;
+  overflow: hidden;
+}
 
+.hero .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Make the video in the background */
+}
+
+.hero video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  background-color: var(--coquelicot);
+  z-index: -1;
+}
+
+.hero-content {
+  margin-block-end: 90px;
+}
+
+.hero-subtitle {
+  background-color: var(--white_10);
+  color: var(--white);
+  margin-inline: auto;
+  padding: 5px;
+  padding-inline-end: 15px;
+  border-radius: var(--radius-8);
+}
+  
+/* 
   .hero {
+    position: relative;
     background-size: contain;
     text-align: left;
   }
@@ -1300,6 +1405,9 @@ body {
     left: auto;
     right: 0;
   }
+
+ */
+
 
 
 
