@@ -266,6 +266,8 @@ body {
 .section-text { font-size: var(--fs-6); }
 
 .btn {
+  position: relative;
+  z-index: 15; /* Ensure it's above other elements */
   max-width: max-content;
   font-size: var(--fs-6);
   text-transform: uppercase;
@@ -553,6 +555,10 @@ body {
 
 .hero-title { margin-block: 30px 8px; }
 
+.hero-title {
+  position: relative;
+  z-index: 10; /* Ensure it's above the video and overlay */
+}
 .hero .section-text { margin-block-end: 40px; }
 
 .hero .btn { margin-inline: auto;background-color: var(--coquelicot);color: var(--rich-black-fogra-29-1);
@@ -1045,6 +1051,14 @@ z-index: 0;
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+
+@media screen and (max-width: 768px) {
+  .hero-title {
+    display: block; /* Ensure it's displayed */
+    opacity: 1; /* Make sure opacity isn't set to 0 */
+  }
+}
 
 /**
  * responsive for larger than 575px screen
