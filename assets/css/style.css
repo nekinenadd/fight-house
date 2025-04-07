@@ -668,7 +668,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (opacity) for dimming */
+  background-color: rgba(0, 0, 0, 0.151); /* Adjust the alpha (opacity) for dimming */
   z-index: 2; /* Ensure the overlay is above the video */
 }
 
