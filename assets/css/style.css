@@ -277,6 +277,7 @@ body {
 }
 
 .btn-primary {
+  z-index: 10;
   background-color: var(--rich-black-fogra-29-1);
   color: var(--coquelicot);
 }
@@ -563,7 +564,7 @@ body {
 .hero .btn { margin-inline: auto;
   background-color: var(--coquelicot);
   color: var(--rich-black-fogra-29-1);
-  z-index: 2;
+  z-index: 10;
 }
 
 .hero .btn:is(:hover, :focus){ background-color: var(--rich-black-fogra-29-1);color: var(--coquelicot);}
@@ -1319,7 +1320,7 @@ z-index: 0;
 
   .header.active .navbar-link { color: var(--white); }
 
-  .header .navbar-link:is(:hover, :focus, .active) { color: var(--white; }
+  .header .navbar-link:is(:hover, :focus, .active) { color: var(--white) };
 
   .header.active .btn {
     background-color: var(--rich-black-fogra-29-1);
