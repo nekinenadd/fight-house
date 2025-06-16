@@ -151,8 +151,7 @@ a {
 }
 
 
-.img-logo { 
-}
+
 
 a,
 img,
@@ -506,9 +505,9 @@ body {
 
 .navbar-link:is(:hover, :focus, .active) { color: var(--rich-black-fogra-29-1); }
 
-.navbar-link:is(.active) { color: var(--coquelicot);}
+.navbar-link:is(.active) { color: black;}
 
-.navbar-link{color: white;}
+.navbar-link{color: var(--rich-black-fogra-29-1);}
 
 
 
@@ -557,11 +556,14 @@ body {
 
 .hero-title {
   position: relative;
-  z-index: 10; /* Ensure it's above the video and overlay */
+  z-index: 1; /* Ensure it's above the video and overlay */
 }
 .hero .section-text { margin-block-end: 40px; }
 
-.hero .btn { margin-inline: auto;background-color: var(--coquelicot);color: var(--rich-black-fogra-29-1);
+.hero .btn { margin-inline: auto;
+  background-color: var(--coquelicot);
+  color: var(--rich-black-fogra-29-1);
+  z-index: 2;
 }
 
 .hero .btn:is(:hover, :focus){ background-color: var(--rich-black-fogra-29-1);color: var(--coquelicot);}
@@ -1309,15 +1311,15 @@ z-index: 0;
   }
 
   .navbar-link {
-    color: var(--white);
+    color: var(--rich-black-fogra-29-1);
     font-size: unset;
     padding: 0 10px;
     margin-block-end: 0;
   }
 
-  .header.active .navbar-link { color: var(--rich-black-fogra-29-1); }
+  .header.active .navbar-link { color: var(--white); }
 
-  .header .navbar-link:is(:hover, :focus, .active) { color: var(--coquelicot); }
+  .header .navbar-link:is(:hover, :focus, .active) { color: var(--white; }
 
   .header.active .btn {
     background-color: var(--rich-black-fogra-29-1);
@@ -1330,10 +1332,6 @@ z-index: 0;
 
 
 
-  /**
-   * HERO
-   */
-/* Make sure the hero section content is aligned with the video */
 .hero {
   position: relative; /* To allow absolute positioning of the video */
   color: var(--cadet-gray);
