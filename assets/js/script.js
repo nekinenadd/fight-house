@@ -31,6 +31,7 @@ function preloadImages(imageUrls) {
   });
 }
 
+
 preloadImages([
   './assets/galerija/galerija1.webp',
   './assets/galerija/galerija2.webp',
