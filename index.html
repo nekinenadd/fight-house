@@ -33,63 +33,29 @@
     - preload images
   -->
 
-  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
-  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
 
 
 </head>
 
 <body id="top">
     <article>
-      <!--x 
-      <header class="header" data-header>
+      <header class="header liquid-nav" data-header>
         <div class="container">
-          <a>
-            <img src='./assets/images/fight-house-logo.png' width="150px" height="130px" alt="tite" class="hero-banner">
-          </a>
-  
           <nav class="navbar" data-navbar>
-  
-            <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-              <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
-            </button>
-  
             <ul class="navbar-list">
-  
-              <li>
-                <a href="#home" class="navbar-link active" data-nav-link>Home</a>
-              </li>
-  
-              <li>
-                <a href="#about" class="navbar-link" data-nav-link>O nama</a>
-              </li>
-  
-              <li>
-                <a href="#termini" class="navbar-link" data-nav-link>Termini</a>
-              </li>
-              <li>
-                <a href="#" class="navbar-link" data-nav-link>Kontakt</a>
-              </li>
-  
+              <li><a href="#termini" class="navbar-link" data-nav-link>Termini</a></li>
+              <li><a href="#treneri" class="navbar-link" data-nav-link>Treneri</a></li>
+              <li><a href="#sala" class="navbar-link" data-nav-link>Sala</a></li>
+              <li><a href="#kontakt" class="navbar-link" data-nav-link>Kontakt</a></li>
             </ul>
-  
           </nav>
-  
-          <a href="#" class="btn btn-primary">Pridruži nam se</a>
-  
-          <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </button>
-  
         </div>
       </header>
-      -->
+
       <!-- POCETNA SA VIDEO SNIMKOM -->
       <section class="section hero " id="home" aria-label="hero" data-section>
-        <a href="#termini" class="btn btn-primary">Termini</a>
         <h1 class="h1 hero-title"> Aktivan um, snažno telo, nepobediv duh</h1>
+        <p class="hero-subline">Zakoračite u svet borilačkih veština</p>
         
         
         <div class="video-container">
@@ -112,8 +78,6 @@
               class="w-100">
             </picture>
            
-            <img src="./assets/images/fitness.png" width="650" height="154" loading="lazy" alt="fitness"
-              class="abs-img w-100">
           </div>
 
           <div class="about-content">
@@ -149,7 +113,7 @@
 
           <h2 class="h2 section-title text-center">Fitnes časovi za svaki cilj</h2>
 
-          <ul class="class-list has-scrollbar">
+          <ul class="class-list has-scrollbar termini-list">
 
             <li class="scrollbar-item">
               <div class="class-card">
@@ -436,8 +400,6 @@
               class="w-100">
             </picture>
            
-            <img src="./assets/images/fitness.png" width="650" height="154" loading="lazy" alt="fitness"
-              class="abs-img w-100">
           </div>
 
           <div class="about-content">
@@ -456,12 +418,9 @@
       </section>
 
       <!-- REKREATIVCI -->
-      <section class="section about" id="about" aria-label="about">
+      <section class="section about" id="rekreativci-section" aria-label="about">
         <div class="container" id="rekreativci">
-
-    
           <div class="about-content">
-
             <h2 class="h2 section-title text-center">Rekreativci</h2>
 
             <p class="section-text">
@@ -469,66 +428,123 @@
               Ovde ne morate nikome ništa da dokazujete, osim sami sebi.
             </p>
 
-            <div class="rekreativci">   <!-- zasto mi drugacije nece margin jebo mu ja majku -->
-            <p class="h3 text-center">
-              Borilački sportovi nisu rezervisani za profesionalce.
-              Samo je teško pronaći klub koji to zaista razume.
-            </p>
+            <div class="rekreativci">
+              <p class="h3 text-center">
+                Borilački sportovi nisu rezervisani za profesionalce.
+                Samo je teško pronaći klub koji to zaista razume.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRENERI -->
+      <section class="section about" id="treneri" aria-label="coaches">
+        <div class="container" id="treneri-container">
+          <div class="about-content">
+            <div class="rekreativci">
+              <p class="h2 text-center">Treneri</p>
             </div>
 
-            <div class="rekreativci">   <!-- zasto mi drugacije nece margin jebo mu ja majku -->
-            <p class="h2 text-center">
-              Treneri
-            </p>
-            </div>
+            <div class="treneri-grid trainer-selector">
+              <input class="trainer-input" type="radio" name="trainer-choice" id="trainer-srdjan" checked>
+              <label class="trainer-card" for="trainer-srdjan">
+                <div class="about-coach">
+                  <figure class="coach-avatar">
+                    <img src="./assets/images/srki.png" width="65" height="65" alt="Srđan Gaćeša">
+                  </figure>
 
-
-            <div class="wrapper">
-
-              <div class="about-coach">
-
-                <figure class="coach-avatar">
-                  <img src="./assets/images/sonsla.png.jpg" width="65" loading="lazy" height="65"  alt="Trainer">
-                </figure>
-
-                <div>
-                  <h3 class="h3 coach-name">Nenad Momirski</h3>
-
-                  <p class="coach-title">Trener boksa</p>
+                  <div>
+                    <h3 class="h3 coach-name">Srđan Gaćeša</h3>
+                    <p class="coach-title">Trener kik-boksa</p>
+                  </div>
                 </div>
 
-              </div>
+                <p class="trainer-desc">
+                  Fokus na tehniku, eksplozivnost i praktičan rad. Treninzi su prilagođeni rekreativcima koji žele
+                  brz napredak kroz jasan plan.
+                </p>
 
-              <a href="tel:0603389401" class="btn btn-primary">Kontakt</a>
+                <p class="trainer-select-text">Izaberi za personal training</p>
+              </label>
 
-            </div>
+              <input class="trainer-input" type="radio" name="trainer-choice" id="trainer-novi">
+              <label class="trainer-card" for="trainer-novi">
+                <div class="about-coach">
+                  <figure class="coach-avatar">
+                    <img src="./assets/images/Uros.JPG" width="65" height="65" alt="Novi trener">
+                  </figure>
 
-            <div class="wrapper">
-
-              <div class="about-coach">
-
-                <figure class="coach-avatar">
-                  <img src="./assets/images/srki.png" width="65" height="65"  alt="Trainer">
-                </figure>
-
-                <div>
-                  <h3 class="h3 coach-name">Srđan Gaćeša</h3>
-
-                  <p class="coach-title">Trener kik-boksa</p>
+                  <div>
+                    <h3 class="h3 coach-name">Uros Urosevic</h3>
+                    <p class="coach-title">Trener Muay Thaija</p>
+                  </div>
                 </div>
 
+                <p class="trainer-desc">
+                  Naglasak na kondiciji, pravilnom disanju i kontroli ritma. Idealno za članove koji žele sigurnu
+                  tehniku i bolju formu.
+                </p>
+
+                <p class="trainer-select-text">Izaberi za personal training</p>
+              </label>
+
+              <div class="trainer-cta-panel">
+                <p class="trainer-cta-kicker">Personal Training</p>
+                <p class="trainer-cta-note">Klikni na karticu trenera i odmah rezerviši termin.</p>
+                <a href="tel:0603550001" class="btn btn-primary trainer-cta trainer-cta-srdjan">Rezerviši sa Srđanom</a>
+                <a href="tel:0603550001" class="btn btn-primary trainer-cta trainer-cta-novi">Rezerviši sa trenerom</a>
               </div>
-
-              <a href="tel:0603550001" class="btn btn-primary">Kontakt</a>
-
             </div>
 
+            <div class="stats-section stats-section-inline">
+              <h2 class="h2 section-title text-center">Fight House u brojkama</h2>
+
+              <ul class="stats-list">
+                <li class="stats-item">
+                  <article class="stats-card">
+                    <p class="stats-number">
+                      <span class="counter-value" data-counter data-target="100" data-suffix="+">0</span>
+                    </p>
+                    <p class="stats-label">Srećnih članova!</p>
+                  </article>
+                </li>
+
+                <li class="stats-item">
+                  <article class="stats-card">
+                    <p class="stats-number">
+                      <span class="counter-value" data-counter data-target="10" data-suffix="+">0</span>
+                    </p>
+                    <p class="stats-label">Termina nedeljno</p>
+                  </article>
+                </li>
+
+                <li class="stats-item">
+                  <article class="stats-card">
+                    <p class="stats-number">
+                      <span class="counter-value" data-counter data-target="2">0</span>
+                    </p>
+                    <p class="stats-label">Trenera</p>
+                  </article>
+                </li>
+
+                <li class="stats-item">
+                  <article class="stats-card">
+                    <p class="stats-number">
+                      <span class="counter-value" data-counter data-target="1">0</span>
+                    </p>
+                    <p class="stats-label">Članarina za sve programe</p>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- GALERIJ -->
-      <section class="section class bg-dark has-bg-image" id="class" aria-label="class">
-        <div class="container" id="termini">
+      <section class="section class bg-dark has-bg-image" id="sala" aria-label="class">
+        <div class="container" id="galerija">
 
           <h2 class="h2 section-title text-center">Galerija</h2>
 
@@ -648,7 +664,7 @@
       </section>
 
       <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="kontakt">
     <div class="section footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
       <div class="container">
         <div class="footer-brand">
@@ -688,8 +704,6 @@
 
             <div>
               <a href="tel:0603550001" class="footer-link"> Srdjan</a>
-
-              <a href="tel:0603389401" class="footer-link">Nenad</a>
             </div>
           </li>
 <!--
