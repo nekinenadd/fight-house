@@ -24,7 +24,7 @@
     - google font link
   -->
 
-  <link rel="preconnsect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
@@ -34,6 +34,8 @@
     - preload images
   -->
 
+  <link rel="preload" href="./assets/images/box.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="./assets/images/rekreativni-box.png.webp" as="image">
 
 
 </head>
@@ -60,9 +62,9 @@
         
         
         <div class="video-container">
-          <video autoplay muted loop playsinline>
+          <video autoplay muted loop playsinline preload="auto" poster="./assets/images/rekreativni-box.png.webp" aria-hidden="true">
             <source src="./assets/images/box.mp4" type="video/mp4" />
-        </video>
+          </video>
         
         </div>
 
