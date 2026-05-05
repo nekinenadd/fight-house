@@ -834,6 +834,156 @@ footer {
   box-shadow: none;
 }
 
+/* First training CTA */
+.first-training-section {
+  position: relative;
+}
+
+.first-training-section .container {
+  align-items: center;
+}
+
+.first-training-banner {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.28);
+}
+
+.first-training-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: auto;
+  background: linear-gradient(to top, rgba(10, 16, 24, 0.42), rgba(10, 16, 24, 0.04));
+  border-radius: inherit;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.first-training-banner img {
+  display: block;
+  aspect-ratio: 1 / 0.92;
+  object-fit: cover;
+}
+
+.first-training-content {
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.97), rgba(244, 246, 248, 0.92));
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+.first-training-kicker {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 0, 0.22);
+  color: var(--rich-black-fogra-29-1);
+  font-family: var(--ff-catamaran);
+  font-size: 1.35rem;
+  font-weight: var(--fw-800);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.first-training-content .section-title {
+  margin-block: 16px 16px;
+  text-align: left;
+}
+
+.first-training-content .section-text {
+  color: #303844;
+  line-height: 1.75;
+}
+
+.first-training-list {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.first-training-list li {
+  position: relative;
+  padding-left: 30px;
+  color: #1d2530;
+  font-size: 1.55rem;
+  line-height: 1.55;
+}
+
+.first-training-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--coquelicot);
+  box-shadow: 0 0 0 5px rgba(255, 255, 0, 0.22);
+}
+
+.first-training-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+  min-height: 56px;
+  padding: 16px 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--coquelicot), #ffe600);
+  color: var(--rich-black-fogra-29-1);
+  font-family: var(--ff-catamaran);
+  font-size: 1.65rem;
+  font-weight: var(--fw-800);
+  text-transform: uppercase;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.first-training-btn:is(:hover, :focus) {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
+}
+
+.first-training-note {
+  margin-top: 14px;
+  color: #46505c;
+  font-size: 1.42rem;
+}
+
+@media (max-width: 575px) {
+  .first-training-content {
+    padding: 24px 20px;
+  }
+
+  .first-training-content .section-title {
+    text-align: center;
+  }
+
+  .first-training-kicker {
+    display: block;
+    width: max-content;
+    margin-inline: auto;
+  }
+
+  .first-training-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .first-training-note {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .first-training-content {
+    padding: 34px;
+  }
+}
+
 /*-----------------------------------*\
   #STATS / REVIEWS
 \*-----------------------------------*/
@@ -1108,14 +1258,63 @@ z-index: 0;
 }
 
 .termini-list .class-card .title-wrapper {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
   padding-block-end: 14px;
   margin-block-end: 14px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.termini-list .class-card .title-icon {
+  width: 56px;
+  height: 56px;
+  padding: 10px;
+  margin-inline-end: 0;
+  min-width: 56px;
+  border: 1px solid rgba(255, 255, 0, 0.45);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #121923 0%, #222b35 100%);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18), 0 0 0 5px rgba(255, 255, 0, 0.1);
+  object-fit: contain;
+}
+
 .termini-list .class-card .card-title {
   color: var(--rich-black-fogra-29-1);
+  line-height: 1.15;
   letter-spacing: 0.2px;
+}
+
+.termini-list .class-card .title-wrapper .h3 {
+  min-width: 0;
+}
+
+.termini-list .class-card .fitpass-badge {
+  justify-self: end;
+  width: 74px;
+  height: auto;
+  padding: 6px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--white);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 575px) {
+  .termini-list .class-card .title-wrapper {
+    gap: 12px;
+  }
+
+  .termini-list .class-card .title-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+
+  .termini-list .class-card .fitpass-badge {
+    width: 66px;
+  }
 }
 
 .termini-list .class-card .card-text {
