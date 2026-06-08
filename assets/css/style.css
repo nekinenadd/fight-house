@@ -1242,6 +1242,16 @@ z-index: 0;
 
 .termini-list .class-card .card-banner {
   position: relative;
+  background-color: #101820;
+}
+
+.termini-list .class-card .card-banner .img-cover {
+  object-fit: contain;
+  object-position: center;
+}
+
+.termini-list .class-card:is(:hover, :focus-within) .card-banner img {
+  transform: none;
 }
 
 .termini-list .class-card .card-banner::after {
@@ -1393,6 +1403,19 @@ z-index: 0;
 .pricing-card--fitpass {
   border-color: rgba(255, 255, 255, 0.44);
   background: linear-gradient(165deg, #101820 0%, #1b252f 58%, #26313c 100%);
+}
+
+.pricing-fitpass-header {
+  display: flex;
+  align-items: center;
+}
+
+.pricing-fitpass-logo {
+  width: min(135px, 48%);
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .pricing-card--fitpass .pricing-badge {
