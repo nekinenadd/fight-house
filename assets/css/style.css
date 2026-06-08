@@ -938,6 +938,7 @@ footer {
   font-size: 1.65rem;
   font-weight: var(--fw-800);
   text-transform: uppercase;
+  border: 0;
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -951,6 +952,48 @@ footer {
   margin-top: 14px;
   color: #46505c;
   font-size: 1.42rem;
+}
+
+.first-training-details {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 0, 0.42);
+  background: linear-gradient(145deg, rgba(255, 255, 0, 0.16), rgba(255, 255, 255, 0.88));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.first-training-details[hidden] {
+  display: none;
+}
+
+.first-training-details p {
+  color: #222a34;
+  font-size: 1.5rem;
+  line-height: 1.65;
+}
+
+.first-training-call-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+  min-height: 48px;
+  padding: 13px 22px;
+  border-radius: 10px;
+  background-color: var(--rich-black-fogra-29-1);
+  color: var(--coquelicot);
+  font-family: var(--ff-catamaran);
+  font-size: 1.5rem;
+  font-weight: var(--fw-800);
+  text-transform: uppercase;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.first-training-call-btn:is(:hover, :focus) {
+  transform: translateY(-2px);
+  background-color: var(--coquelicot);
+  color: var(--rich-black-fogra-29-1);
 }
 
 @media (max-width: 575px) {
@@ -975,6 +1018,10 @@ footer {
 
   .first-training-note {
     text-align: center;
+  }
+
+  .first-training-call-btn {
+    width: 100%;
   }
 }
 

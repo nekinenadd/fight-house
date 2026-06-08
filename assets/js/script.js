@@ -64,6 +64,22 @@ if (navbar && navLinks.length) {
   addEventOnElem(navLinks, "click", closeNavbar);
 }
 
+/**
+ * first training CTA note
+ */
+const firstTrainingTrigger = document.querySelector("[data-first-training-trigger]");
+const firstTrainingDetails = document.querySelector("#first-training-details");
+
+if (firstTrainingTrigger && firstTrainingDetails) {
+  firstTrainingTrigger.addEventListener("click", function () {
+    const isOpen = !firstTrainingDetails.hidden;
+
+    firstTrainingDetails.hidden = isOpen;
+    firstTrainingTrigger.setAttribute("aria-expanded", String(!isOpen));
+    firstTrainingTrigger.textContent = isOpen ? "Javi se za prvi dolazak" : "Pogledaj napomenu ispod";
+  });
+}
+
 
 
 /**
