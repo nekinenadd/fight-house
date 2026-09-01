@@ -18,14 +18,6 @@ if (firstTrainingTrigger && firstTrainingDetails) {
   firstTrainingTrigger.addEventListener("click", function () {
     const isOpen = !firstTrainingDetails.hidden;
 
-    if (!isOpen && window.goatcounter) {
-      window.goatcounter.count({
-        path: "first_training_note_open",
-        title: "First training note opened",
-        event: true,
-      });
-    }
-
     firstTrainingDetails.hidden = isOpen;
     firstTrainingTrigger.setAttribute("aria-expanded", String(!isOpen));
     firstTrainingTrigger.textContent = isOpen ? "Javi se za prvi dolazak" : "Pogledaj napomenu ispod";
