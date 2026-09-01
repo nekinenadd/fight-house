@@ -32,6 +32,35 @@ if (firstTrainingTrigger && firstTrainingDetails) {
   });
 }
 
+/**
+ * goatcounter engagement tracking
+ */
+
+const trackGoatEvent = function (path, title) {
+  if (!window.goatcounter || !window.goatcounter.count) return;
+
+  window.goatcounter.count({
+    path,
+    title,
+    event: true,
+    no_session: true,
+  });
+};
+ 
+const engagementTimers = [
+  { seconds: 15, path: "stay_15s", title: "15 sekundi" },
+  { seconds: 30, path: "stay_30s", title: "30 sekundi" },
+  { seconds: 60, path: "stay_60s", title: "60 sekundi" },
+  { seconds: 120, path: "stay_120s", title: "120 sekundi" },
+];
+
+engagementTimers.forEach(({ seconds, path, title }) => {
+  window.setTimeout(function () {
+    if (document.visibilityState === "visible") {
+      trackGoatEvent(path, title);
+    }
+  }, seconds * 1000);
+});
 
 
 /**
