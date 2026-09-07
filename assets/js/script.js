@@ -64,14 +64,33 @@ engagementTimers.forEach(({ seconds, path, title }) => {
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
+let lastScrollY = window.scrollY;
+
 window.addEventListener("scroll", function () {
-  if (window.scrollY >= 100) {
+  const currentScrollY = window.scrollY;
+
+  // toggle "solid" look after scrolling past 100px
+  if (currentScrollY >= 100) {
     if (header) header.classList.add("active");
     if (backTopBtn) backTopBtn.classList.add("active");
   } else {
     if (header) header.classList.remove("active");
     if (backTopBtn) backTopBtn.classList.remove("active");
   }
+
+  // hide on scroll down, show on scroll up
+  if (header) {
+    const scrollingDown = currentScrollY > lastScrollY;
+    const pastThreshold = currentScrollY > 120; // don't hide near the very top
+
+    if (scrollingDown && pastThreshold) {
+      header.classList.add("nav-hidden");
+    } else {
+      header.classList.remove("nav-hidden");
+    }
+  }
+
+  lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
 });
 
 /**

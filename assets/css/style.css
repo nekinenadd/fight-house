@@ -513,6 +513,15 @@ footer {
   align-items: center;
 }
 
+.header.liquid-nav {
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.liquid-nav.nav-hidden {
+  transform: translateX(-50%) translateY(-160%) !important;
+}
+
+
 .logo {
   color: var(--rich-black-fogra-29-1);
   font-family: var(--ff-catamaran);
@@ -1875,6 +1884,7 @@ z-index: 0;
     max-width: unset;
     padding-inline: 5px;
   }
+
 
 
 
