@@ -8,9 +8,9 @@
 
 const translations = {
   sr: {
-    title: "Fight House - Kuća borilačkih sportova",
+    title: "Fight House | Boks, kikboks i Muay Thai u Novom Sadu",
     nav: ["Termini", "Treneri", "Sala", "Kontakt"],
-    heroTitle: "Aktivan um, snažno telo, nepobediv duh",
+    heroTitle: "Boks, kikboks i Muay Thai u Novom Sadu",
     heroSubline: "Zakoračite u svet borilačkih veština",
     welcomeTitle: "Dobrodošli u Fight House, kuću borilačkih sportova!",
     welcomeText: "Koncept našeg rada jeste stvaranje jedne prijatne i zdrave zajednice gde ljudi mogu da kroz borilačke sportove podignu nivo svog fizičkog zdravlja, pokrenu se i osećaju se dobro u svojoj koži! Fight House je klub rekreativnog karaktera gde osobe svih nivoa, bilo da su početnici ili oni naprednije tehnike, dolaze kako bi naučili i usavršili svoju tehniku kik boksa i boksa kao i podigli svoju snagu i izdržljivost, bez pritiska od takmičenja. A za one najhrabrije uvek postoje termini gde mogu da se oprobaju i upuste u sparing! U našim treninzima ćete pronaći savršen balans između izazova i zabave, stvarajući zdravu naviku koja postaje deo vašeg svakodnevnog života.",
@@ -63,7 +63,7 @@ const setCardDescription = (values) => document.querySelectorAll(languageSelecto
 const applyLanguage = (language) => {
   const copy = translations[language] || translations.sr;
   currentLanguage = translations[language] ? language : "sr";
-  document.documentElement.lang = currentLanguage;
+  document.documentElement.lang = currentLanguage === "sr" ? "sr-Latn-RS" : currentLanguage;
   document.title = copy.title;
   setText(languageSelectors.nav, copy.nav);
   setText(languageSelectors.classTitles, copy.classTitles);
